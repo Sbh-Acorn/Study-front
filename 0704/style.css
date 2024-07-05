@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin-left: 20px;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 10px;
+}
+
+.dropbtn {
+    width: 200px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 70px;      
+}
+
+.dropbtn ul{
+    left:0
+}
+
+.dropbtn:hover {
+    color: #01a1dd;
+    background-color: rgb(229, 235, 235);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width:160px;
+}
+
+.dropdown-content li {
+    padding: 10px;
+}
+
+.dropdown-content li a { 
+    text-decoration: none;
+    color: brown;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f1f1f1;
+    color: black;
+    
+}
+
+.dropbtn:hover .dropdown-content {
+    display: block;
+}
+
+.logo img {
+    width: 60px;
+}
+
+/* main */
+main {
+    background-image: url(../images/bluebottleback.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 45px;
+}
+
+.introduce {
+    font-size: 3em;
+    color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-size: 3em;
+    color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    background-color: #01a1dd;
+    cursor: pointer;
+    padding: 5px 24px;
+    color: white;
+    border: 0;
+    font-weight: 400;
+}
+
+footer {
+    color: gray;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    padding: 10px 50px;
+    text-align: center;
+}
+
+footer a {
+    color: gray;
+    margin: 0 10px;
+    font-size: 20px;
+}

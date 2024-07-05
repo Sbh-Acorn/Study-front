@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition 244p</title>
+    <style>
+        .box1{
+            width: 150px;
+            height: 150px;
+            border: 1px solid;
+            background-color: lightblue;
+            transition-property: width,height;/*트랜지션 대상*/
+            transition-delay: 1s;/*변환까지 걸리는 시간*/
+            transition-duration: 3s,1s;/*transition-property의 요소 변환까지 걸리는 시간*/
+        }
+        .box1:hover{
+            width: 300px;
+            height: 270px;
+        }
+        .box2{
+            margin: 100px;
+            width: 150px;
+            height: 150px;
+            background-color: orange;
+            border: 1px solid;
+            transition: 2s ease-in-out;
+            /*속성,실행시간, 실행형태, 지연시간을 한번에 쓸 수 있다.*/
+        }
+        .box2:hover{
+            width: 250px;
+            height: 250px;
+            background-color: aqua;
+            border:5px dotted;
+            transform: rotate(45deg);
+        }
+        #ex div{
+            width: 100px;
+            height: 50px;
+            margin: 5px 10px;
+            background-color: lightblue;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            display:inline-block/*책 214쪽 */
+        }
+        #ex:hover div{
+            height: 400px;
+            
+        }
+        #ex .ease{
+            /*ease 처음에 천천히 빨리지다가 천천히 끝냄*/
+            transition: 3s ease;
+        }
+        #ex .linear{
+            /*linear 처음부터 끝까지 동일한 속도*/
+            transition: 3s linear;
+        }
+        #ex .ease-in{
+            /*linear 처음부터 끝까지 동일한 속도*/
+            transition: 3s ease-in;
+        }
+        #ex .ease-out{
+            /*linear 처음부터 끝까지 동일한 속도*/
+            transition: 3s ease-out;
+        }
+        #ex .ease-in-out{
+            /*linear 처음부터 끝까지 동일한 속도*/
+            transition: 3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <h2>트랜지션 전환244쪽</h2>
+    <p>
+        웹 요소의 배경색이 바뀌거나
+        도형의 테두리가 원형으로 바뀌는 등
+        스타일 속성이 바뀌는 것을 말한다.
+    </p>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <h2> trainsition-timing-function 속도 곡선 속성 값</h2>
+    <div id="ex">
+        <div class="ease"> ease 기본값</div>
+        <div class="linear">linear</div>
+        <div class="ease-in">ease-in</div>
+        <div class="ease-out">ease-out</div>
+        <div class="ease-in-out">ease-in-out</div>
+    </div>
+</body>
+</html>

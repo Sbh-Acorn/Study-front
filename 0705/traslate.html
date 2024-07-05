@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>246쪽 변환 transform: translate</title>
+    <style>
+        .origin{
+            border: 1px solid;
+            width: 350px;
+        }
+        .movex:hover{
+            transform: translateX(50px);
+        }
+        .movey:hover{
+            transform: translateY(50px);
+        }
+        .movexy:hover{
+            transform:translate(50px,20px);
+        }
+    </style>
+</head>
+<body>
+    <h2>변환 transform</h2>
+    <p>
+        특정 요소의 크기나 형태를 변하게 하는 것 
+        사용자의 동작에 반응해 텍스트나 이미지를 변환시킴
+        2차워(x,y)/3차원(x,y,z):원근감의 표현도 가능
+    </p>
+    <div class="origin">
+        <div class="movex">
+            <img src="../images/bluebottle.png">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="movey">
+            <img src="../images/bluebottle.png">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="movexy">
+            <img src="../images/bluebottle.png">
+        </div>
+    </div>
+</body>
+</html>

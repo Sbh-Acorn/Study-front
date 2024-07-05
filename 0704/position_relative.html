@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 이거 그냥 안드로이드 스튜디오에서 했던 거, 객체 간의 절대적, 상대적 위치 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position _relative</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+        }
+        .static{
+            background-color: blue;
+            width: 300px;
+            height: 200px;
+            position: static;/* 기본값:요소를 문서의 흐름에 맞춰 배치*/
+        }
+        .relative-1{
+            background-color: antiquewhite;
+            width: 300px;
+            height: 200px;
+            position: relative;/* 기본값:요소를 문서의 흐름에 맞춰 배치*/
+        }
+        .relative-2{
+            background-color: aquamarine;
+            width: 300px;
+            height: 200px;
+            position: relative;/* 기본값:요소를 문서의 흐름에 맞춰 배치*/
+            left: 100px;
+            top: -50px;
+        }
+        .fixed{
+            background-color: brown;
+            width: 150px;
+            height: 150px;
+            position: fixed;/* 기본값:요소를 문서의 흐름에 맞춰 배치*/
+            right: 50px;
+            top: 50px;
+        }
+        .sticky{
+            width: 80px;
+            height: 80px;
+            background-color: blueviolet;
+            position: sticky;
+            top:5px;/*top이 5px일 때 고정*/
+        }
+        pre{
+            font-size:20px;
+        }
+        #float{
+            float:right;
+            border:5px dotted red;
+            width: 128px; /*8em*/
+            padding: 4px;/*0.25em*/
+            margin: 16px;/*1em*/
+        }
+    </style>
+</head>
+<body>
+    <div class="static">박스1</div>
+    <div class="relative-1">박스2</div>
+    <div class="relative-2">박스3</div>
+    <div class="fixed">박스4<br>스크롤 해도 화면에 나오게 할 때 fixed 쓰면 편함</div>
+    <div class="sticky">박스5</div>
+    <pre>
+        fddddddddddddddddd
+        dddddddddddddddddddd
+        ddddddddddddddddddddddddddddddddd
+        ddddddddddddddddddddddddddddddddddddd
+        ddddddddddddddddddddddddddddddddddddd
+        ddddddddddddddddddddddddddddddddd
+        dddddddddddddddddddd
+        dddddddddddddddddddd
+
+    </pre>
+        <h3>학기말 공지</h3>
+        <hr>
+        <div>
+            <p id="float">어쩌구저쩌구</p>
+            <p>
+                dfdfdffdfddfd
+                fdfd
+                fd
+                dxv
+                qwe
+            </p>
+        </div>
+    <!-- fixed는 7일동안 나오지 않게 하는 메시지 창, sticky는 화면 상단에 메뉴바 고정하는 등에서 사용 -->
+</body>
+</html>
