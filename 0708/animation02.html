@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation 연습</title>
+    <style>
+        section{
+            margin:0;
+            background: url(../images/hq720.jpg) no-repeat;
+            background-size: cover;
+            height: 700px;
+            width: 100%;
+        }
+        .first span,p{
+            color: aliceblue;
+            font-size: 50px;
+            position:absolute;
+            top:52%;
+            right:5%;
+            animation: moveIn 2s ease-in;
+        }
+
+        @keyframes moveIn{
+            from{
+                right: -10%;
+                opacity: 0;
+            }to{
+                right:5%;
+                opacity: 0.8;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="first">
+            <span> best idol </span>
+            <p>many hit song</p>
+        </div>
+        <pre class="second">
+            blackpink
+            twice
+            itzy
+        </pre>
+    </section>
+</body>
+</html>

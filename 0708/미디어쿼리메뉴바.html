@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            background-color: lightblue;
+            display: flex;
+            justify-content: space-around;
+            padding-top: 15px;
+        }
+        ul{
+            display:flex;
+            list-style: none;
+        }
+        li{
+            padding: 0 15px/*글씨 떨어지게*/
+        }
+        /*창 크기 가로가 768이하일 때*/
+        @media screen and (max-width:768px){
+            nav{
+                background-color: black;
+            }
+            .navbar ul{
+                flex-direction: column;
+            }
+            .appoo{
+                display:none;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="#">Logo</a>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">a</a>
+                </li>
+                <li>
+                    <a href="#">b</a>
+                </li>
+                <li>
+                    <a href="#">c</a>
+                </li>
+                <li>
+                    <a href="#">d</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="icons">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="appoo">아이콘</a>
+                </li>
+                <li class="appoo">
+                    dfd
+                </li>
+
+            </ul>
+        </div>
+        </div>
+    </nav>
+</body>
+</html>
