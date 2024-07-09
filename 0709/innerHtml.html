@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            background-color: cadetblue;
+            color:aliceblue;
+        }
+        #innerH{
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h2>innerHtml을 써보자</h2>
+    <div id="innerH"></div>
+    <button onclick="subway()">subway버튼</button>
+    <button onclick="bus()">bus버튼</button>
+    <script>
+        function subway(){
+            let name ="subway"
+            let city="홍대역"
+            console.log(name+city)
+            //getElementById는 # 안붙여도됨
+            document.getElementById('innerH').innerHtml=(name+city);
+        }
+        function bus(){
+            let name ="Bus"
+            let city="신촌역"
+            console.log(name+city)
+            //getElementById는 # 안붙여도됨
+            document.getElementById('innerH').innerHtml=(name+city);
+        }
+    </script>
+</body>
+</html>

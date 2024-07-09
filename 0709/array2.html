@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="theBody">글자 배경색 바꾸기 </div>
+    <button onclick="chColor()">랜덤 버튼</button>
+    <script>
+        function chColor(){
+            let arrColor=["red","orange","yellow","green","blue","navy","purple"]
+            let $bodyTag = document.getElementById("theBody")
+            //queryselector와, getElementById 는 똑같은 역할 하지만 #이 붙고 안붙음
+            let arrNum=Math.floor(Math.random()* arrColor.length)
+            $bodyTag.style.backgroundColor=arrColor[arrNum];
+            //Math.random() 함수가 0부터 1 사이의 모든 값을 균일하게 반환한다는 점입니다. 
+            //따라서 Math.random() * 7 또한 0부터 6.999...까지 균일하게 분포
+            //즉 균일하게 분포된 것을 floor로 정수만 남기면 배열에 맞춰서 숫자가 생성된다. 
+        }
+    </script>
+</body>
+</html>
