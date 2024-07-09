@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function change(){
+            let changestyle= document.getElementById("mySpan");
+            changestyle.style.color="green";
+            changestyle.style.fontSize="30px";
+            
+            let gradeStyle = document.getElementById("gradeMessage");
+            gradeStyle.style.color = "blue";
+            gradeStyle.style.fontSize = "30px";
+        }
+        let korean = prompt("국어점수 입력", "");
+        let math = prompt("수학점수 입력", "");
+        let eng = prompt("영어점수 입력", "");
+
+        // 입력 값을 숫자로 변환
+        korean = parseFloat(korean);
+        math = parseFloat(math);
+        eng = parseFloat(eng);
+        let message;
+        const average = (korean + math + eng) / 3;
+        if(average<=35){
+            message = "F입니다"
+        }
+        else if(35<average && average<=55){
+            message = "C입니다"
+        }
+        else if(55<average && average<=70){
+            message = "B입니다"
+        }
+        else{
+            message = "A입니다"
+        }
+        // document.write 사용
+        document.write("평균 점수: " + average+"<br>");
+        document.write('<span id="gradeMessage">등급은 ' + message + '</span>');
+    </script>
+</head>
+<body>
+    <h3>CSS 스타일 동적 변경</h3>
+    <hr>
+    <p style="color:blue">이것은
+        <span id="mySpan" style="color:red">등급 관련문장입니다.</span>
+    </p>
+    <input type="button" value="색 변경" onclick="change()">
+</body>
+</html>

@@ -136,11 +136,18 @@ footer a {
 @media screen and (max-width: 768px) {
     header {
         justify-content: space-between;
+        position: relative;
     }
 
     .hamburger {
         display: block;
         cursor: pointer;
+        position: absolute; /* 위치 고정 */
+        transition: left 1s ease-in-out; /* 애니메이션 추가 */
+        left: 30px; /* 초기 위치 */
+    }
+    .hamburger.moved { /* nav가 나타날 때 이동할 위치 */
+        left: 220px; /* nav 요소의 너비만큼 이동 */
     }
 
     .hamburger i {
@@ -149,13 +156,33 @@ footer a {
 
     nav {
         display: none;
+        position:fixed;
+        width: 200px;
+        left:0;
+        top:0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000; /* 앞에 오도록 설정 */
+    }
+
+    nav ul {
         flex-direction: column;
         width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
     }
 
     .logo {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    nav.show {
+        display: flex;
     }
 }

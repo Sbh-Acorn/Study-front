@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #desc{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="item">
+        <img src="../images/applebox.jpg" width="300"><br>
+
+        <button onclick="showDetail()" id="open">상세 설명 보기</button>
+        <div id="desc">
+            <h4>사과</h4>
+            <p>사과 좋아</p>
+            <button onclick="closeDetail()" id="close">상세 설명 닫기</button>
+        </div>
+
+    </div>
+    <script>
+        //상세 설명 부분을 화면에 표시
+        function showDetail(){
+            document.querySelector("#desc").style.display="block";
+            document.querySelector("#open").style.display="none";
+        }
+        function closeDetail(){
+            document.querySelector("#desc").style.display="none";
+            document.querySelector("#open").style.display="block";
+        }
+    </script>
+</body>
+</html>

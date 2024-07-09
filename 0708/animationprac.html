@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border:3px solid black;
+        }
+        span{
+            font-size:300px;
+            animation:animation1 5s infinite ease-in-out
+        }
+        h3{
+            font-size:100px;
+            transition : font-size 5s
+        }
+        h3:hover{
+            font-size:500%
+        }
+        @keyframes animation1 {
+            0%{
+                color:blue;
+            }
+            30%{
+                color:green;
+            }
+            100%{
+                color: red;
+            }
+        }
+        @keyframes animation2{
+            from{
+                font-size:10px;
+            }to{
+                font-size: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>span</span>텍스트를 5초에 blue,green,red로 무한 반복합니다.
+    </div>
+    <h3>야호</h3>
+</body>
+</html>

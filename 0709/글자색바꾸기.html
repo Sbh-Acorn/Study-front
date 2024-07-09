@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id ="change1">글자색 바꾸기1</button>
+    <button id ="change2">글자색 바꾸기2</button>
+    <button id ="change3">글자색 바꾸기3</button>
+    <p>
+        글자색 바꾸는 부분 아무 내용 
+    </p>
+    <script>
+        ////클릭 글자 색상 바꾸기 3가지 방법/////
+        //방법1 함수를 직접 선언//
+        let a=1;
+        document.querySelector("#change1").onclick=function(){
+            if(a==1){
+                a=2;
+                document.querySelector("p").style.color="orange";
+            }
+            else if(a==2){
+                a=1;
+                document.querySelector("p").style.color="black";
+            }
+            
+        }
+        //방법 2// 웹 요소를 따로 변수로 만들지 않고 사용 
+        document.querySelector("#change2").onclick=changeColor1;
+        function changeColor1(){
+            if(a==1){
+                a=2;
+                document.querySelector("p").style.color="blue";
+            }
+            else if(a==2){
+                a=1;
+                document.querySelector("p").style.color="black";
+            }
+        }
+        //방법 3: 웹 요소를 변수로 지정& 미리 만든 함수 사용
+        let chageBtn = document.querySelector("#change3");
+        chageBtn.onclick=changeColor2;
+
+        function changeColor2(){
+            if(a==1){
+                a=2;
+                document.querySelector("p").style.color="red";
+            }
+            else if(a==2){
+                a=1;
+                document.querySelector("p").style.color="black";
+            }
+        }
+    </script>
+</body>
+</html>
