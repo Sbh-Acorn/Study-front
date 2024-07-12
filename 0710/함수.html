@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //함수의 이름이 없는 것.
+        let add=function(a,b){
+            return a+b;
+            
+        }
+        let sum = add(1,2)
+        console.log(sum)
+        let result =(function(){
+            return 1+4;
+        }())
+        let result2 =(function(){
+            return 1+10;
+        })()
+        let result3 =(function(a,b){
+            return a*b;
+        })(22,30)
+
+        //()를 열고 닫는 것은 함수를 실행한다는 의미이다.! 즉 14번째 처럼 안해도 실행된다는거
+        // 즉 add 에서도 ()를 넣고 인자를 넣으면 자동 실행된다. 
+        //화살표 함수!!
+        //익명,즉 이름이 없는 함수에서만 가능하다. return이 생략된 것으로 생각하자
+        const hi = function(){
+            return "안녕하세요?";
+        }();
+        console.log(hi);
+        const hi1= ()=>{return "안녕하세요?"};
+        console.log(hi1())
+        const hi2 = () => "안녕하세요"
+        console.log(hi2())
+        //배개변수가 1개일때
+        let hi3 = function(user){
+            document.write(user+"님, 안녕하세요?")
+        }
+        hi3("소병학");//함수실행
+
+        let hi4 = user => document.write(user+"님 화살표 ㅎㅇ")
+        hi4("용지민");
+        // 매개변수가 2개일 때
+        let sum1 =function(a,b){
+            return a+b;
+        }
+
+        let hi5 = function(){ 
+            let userName = prompt("이름입력","하")
+            document.write(userName+"님, 안녕하세요?")
+        }
+        hi5();
+
+        console.log(sum1(3,4));
+        let sum2 = (a,b) =>{return a+b;}
+        console.log(sum2(3,4));
+        let sum3=(a,b)=>a+b;
+        console.log(sum3(3,4));
+    </script>
+</body>
+</html>

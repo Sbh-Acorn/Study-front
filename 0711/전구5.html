@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <p>if 사용</p>
+    <img id="myImage" src="../images/applebox.jpg" alt=""><br>
+    <button id="onBtn" onclick="light(1)">켜기</button>
+    <button id="offBtn"onclick="light(0)">끄기</button>
+    <!-- <img src="../images/7G1Lw-tVlmqOp2v3zuTEHB_0R-MFoeyDs8-l_crpSFU3hdafvNVJrLvpQERJwNng-ebo6EZo--IWDnt-T2nsJPsQ_PVyuUzAVpqKQjcn7BkS_ldE-wtv1_QpjHiZROzDIEV9wtzTDV0P6AYspVxQ8g.webp" alt=""> -->
+    <script>
+        function light(a){
+            let pic;
+            if(a==0){
+                pic="../images/applebox.jpg"
+            }else if(a==1){
+                pic="../images/7G1Lw-tVlmqOp2v3zuTEHB_0R-MFoeyDs8-l_crpSFU3hdafvNVJrLvpQERJwNng-ebo6EZo--IWDnt-T2nsJPsQ_PVyuUzAVpqKQjcn7BkS_ldE-wtv1_QpjHiZROzDIEV9wtzTDV0P6AYspVxQ8g.webp"
+            }
+            document.getElementById("myImage").src=pic;
+        }
+    </script>
+</body>
+</html>

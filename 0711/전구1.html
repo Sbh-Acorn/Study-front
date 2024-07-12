@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <p>onClick 사용</p>
+    <img id="myImage" src="../images/applebox.jpg" alt=""><br>
+    <!-- <img src="../images/7G1Lw-tVlmqOp2v3zuTEHB_0R-MFoeyDs8-l_crpSFU3hdafvNVJrLvpQERJwNng-ebo6EZo--IWDnt-T2nsJPsQ_PVyuUzAVpqKQjcn7BkS_ldE-wtv1_QpjHiZROzDIEV9wtzTDV0P6AYspVxQ8g.webp" alt=""> -->
+    <button id="onBtn">켜기</button>
+    <button id="offBtn">끄기</button>
+
+    <script>
+        let myImage=document.getElementById('myImage')
+        let onBtn=document.getElementById('onBtn')
+        let offBtn=document.getElementById('offBtn')
+        //이벤트 핸들러를 설정할 때는 함수 이름만 할당하고, 괄호 ()를 사용하지 않습니다.
+        onBtn.onclick=changePic1; //함수실행시 괄호가 없다
+        offBtn.onclick=changePic2;
+        function changePic1(){
+            myImage.src="../images/applebox.jpg"; 
+        }
+        function changePic2(){
+            myImage.src="../images/7G1Lw-tVlmqOp2v3zuTEHB_0R-MFoeyDs8-l_crpSFU3hdafvNVJrLvpQERJwNng-ebo6EZo--IWDnt-T2nsJPsQ_PVyuUzAVpqKQjcn7BkS_ldE-wtv1_QpjHiZROzDIEV9wtzTDV0P6AYspVxQ8g.webp"; 
+        }
+    </script>
+</body>
+</html>

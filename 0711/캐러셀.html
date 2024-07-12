@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <style>
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .carousel img {
+            width: 100%;
+            display: none;
+        }
+        .carousel img.active {
+            display: block;
+        }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <button id="prev" class="prev">❮</button>
+        <img src="../images/applebox.jpg" class="active" alt="Image 1">
+        <img src="../images/2aPSstkKngSRCY7TYIA03z_2O6nd96k7eJEmrdairPTUNhX8apBofC9V4Gs4cgfWorbBnTyEkRtl9QCsdbjtxg.webp" alt="Image 2">
+        <img src="../images/32b5cc1674764e7c1282c5a280dc22d4f43ad912ad8dd55b04db6a64cddaf76d.gif" alt="Image 3">
+        <button id="next" class="next">❯</button>
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.carousel img');
+        let currentIndex = 0;
+
+        document.getElementById('prev').addEventListener('click', (e) => {
+            if (e.target.id === 'prev') {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                images[currentIndex].classList.add('active');
+            }
+        });
+
+        document.getElementById('next').addEventListener('click', (e) => {
+            if (e.target.id === 'next') {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

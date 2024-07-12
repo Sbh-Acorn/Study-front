@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>to-do-list</h1>
+        <p>공부할 내용 기록!</p>
+        <form>
+            <input type="text" id="subject" autofocus>
+            <button onclick="newRegister(); return false;">추가하기</button>
+            <hr>
+            <!-- return false는  버튼의 기능중 하나인 submit 기능을 취소함 -->
+            <ul id="itemList"></ul>
+        </form>
+    </div>
+    <script>
+        function newRegister(){
+            let newItem = document.createElement("li");
+            let subject=document.querySelector("#subject");
+
+            let textNode = document.createTextNode(subject.value)
+            newItem.appendChild(textNode);
+            
+            //웹 문서에서 부모 노드 가져오기
+            let itemList=document.querySelector("#itemList");
+            // litemList.appendChild(newItem)
+            itemList.insertBefore(newItem, itemList.childNodes[0])
+            subject.value=""
+            // newItem.onclick=function(){
+            //     this.remove();
+            // }
+        }
+    </script>
+</body>
+</html>

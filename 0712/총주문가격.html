@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 300px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>총 주문 가격 확인</h2>
+        <form>
+            <fieldset>
+                <legend>기본 가격</legend>
+                <p>30,000</p>
+            </fieldset>
+            <fieldset>
+                <legend>추가 금액</legend>
+                <label>
+                    <input type="checkbox" class="checkbx" value="1000" >기장 추가(1000)
+                </label>
+                <label>
+                    <input type="checkbox" class="checkbx" value="2500" >배송비 (2500)
+                </label>
+                <label>
+                    <input type="checkbox" class="checkbx" value="3500" >도서지역 추가비용(3500)
+                </label>
+                
+            </fieldset>
+            <fieldset>합계</fieldset>
+            <input type="text" id="total" class="price" readonly> 
+        </form>
+        <script>
+            let price=30000;
+
+            let sidemenu=document.querySelectorAll(".checkbx");
+
+            let total = document.querySelector("#total");
+            total.value = price + "원";
+            for(i=0; i<sidemenu.length;i++){
+                sidemenu[i].onclick=function(){
+                    if(this.checked==true){
+                        price+=parseInt(this.value);
+                    }
+                    else{
+                        price-=parseInt(this.value);
+                    }
+                    total.value=price+"원";
+                }
+            }
+            
+            
+        </script>
+    </div>
+</body>
+</html>

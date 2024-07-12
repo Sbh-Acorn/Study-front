@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pic1{
+            display:block;
+        }
+        .pic2{
+            display: none;
+        }
+        .pic1.active{
+            display:none;
+        }
+        .pic2.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <img class ="pic1"src="../images/2aPSstkKngSRCY7TYIA03z_2O6nd96k7eJEmrdairPTUNhX8apBofC9V4Gs4cgfWorbBnTyEkRtl9QCsdbjtxg.webp" alt="">
+    <img class ="pic2"src="../images/applebox.jpg" alt="">
+    <button class="toggle">토글버튼</button>
+    <script>
+        let $pic1=document.querySelector(".pic1");
+        let $pic2=document.querySelector(".pic2");
+        let $toggle=document.querySelector(".toggle")
+        $toggle.addEventListener("click",()=>{
+            $pic1.classList.toggle("active");
+            $pic2.classList.toggle("active");
+            //active가 없으면 추가, 있으면 뺀다.
+        })
+    </script>
+</body>
+</html>

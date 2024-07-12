@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contents">
+        <form>
+            <ul>
+                <li>
+                    <label for="oPrice">원래 가격<input type="text" id="oPrice">원
+                    </label>
+                </li>
+                <li>
+                    <label for="rate">할인율<input type="text" id="rate">%
+                    </label>
+                </li>
+                <button onclick="showPrice(event)">할인 가격 계산</button>
+            </ul>
+        </form>
+    </div>
+    <div class="showResult">
+        <input type="text" id="result" readonly>
+    </div>
+    <script>
+        function showPrice(event) {
+            event.preventDefault();
+            let oPrice = parseInt(document.querySelector("#oPrice").value);
+            let rate = parseInt(document.querySelector("#rate").value);
+            let result = document.querySelector("#result");
+            if (!isNaN(oPrice) && !isNaN(rate)) {
+                result.value = oPrice - (oPrice * rate / 100) + "원";
+            } else {
+                result.value = "0원";
+            }
+        }
+    </script>
+</body>
+</html>

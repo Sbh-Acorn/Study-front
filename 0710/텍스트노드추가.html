@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        텍스트 노드 추가하기
+        Dom에 새로운 요소를 추가할 때는 가장 먼저 요소 노드를 만들어야 한다
+        1. 요소 노드 만들기 creaeteElement()메서드
+        2. 텍스트 노드 만들기 createTextNode()
+        3. 자식 노드 연결하기 appendChild()
+    </pre>
+    <script>
+        let newP = document.createElement("p");
+        let textNode = document.createTextNode("추가될 내용 부분")
+        newP.appendChild(textNode);
+        document.body.appendChild(newP)
+    </script>
+</body>
+</html>

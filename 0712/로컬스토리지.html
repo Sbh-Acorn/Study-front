@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>할일목록</h1>
+        <p>해야할 일 기록</p>
+        <form>
+            <input type="text" id="item" autofocus>
+            <button id="add"class="addBtn">
+                추가하기
+            </button>
+        </form>
+        <div id="itemList">
+
+        </div>
+    </div>
+    <script>
+        const $form=document.querySelector("form");
+        //동작(이베느를 실행하지 못하게 막는 메서드)
+        $form.addEventListener("submit",(event)=>{
+            event.preventDefault();
+        });
+        let itemList=[];
+        let addBtn=document.querySelector("#add");
+        addBtn.addEventListener("click",addList);
+        function addList(){
+            let item=document.querySelector("#item").value;
+            if(item != null){
+                itemList.push(item);
+                // itemList.unshift(item)
+            }
+            showList();
+        }
+        function showList(){
+            let list="<ul>";
+            for(let i=0;i<itemList;i++){
+                list += "<ii>"+itemList[i]+"<li>";
+            }
+            list += "<ul>";
+            document.querySelector("#itemList").innerHTML=list;
+        }
+    </script>
+</body>
+</html>

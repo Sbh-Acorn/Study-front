@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sumMulti(x,y){
+            if(x==y){
+                console.log(x*y);
+                return x*y;
+            }
+            else{
+                console.log(x+y);
+                return x+y;
+            }
+        }
+        function compareTwo(x,y){
+            if(x==y){
+                alert(`${x}와 ${y}는 같다.`)
+            }
+            else if(x>y){
+                alert(`${x}> ${y}`)
+            }
+            else{
+                alert(`${x}< ${y}`)
+            }
+        }
+        let num1 = parseInt(prompt("x값"));
+        let num2 = parseInt(prompt("y값"));
+        sumMulti(num1,num2);
+        compareTwo(num1,num2);
+        //호이스팅 : 함수 내의 변수 및 함수 선언을 각 유효 범위의
+        //최상단으로 끌어 올려주는 js의 특징 
+    </script>
+</body>
+</html>

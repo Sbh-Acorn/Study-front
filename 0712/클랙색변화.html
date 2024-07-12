@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>클릭해봐</h3>
+    <h5>tdl</h5>
+    <ul>
+        <!-- 유티코드엔티티코드 -->
+        <li class="check">&check; 할 일 1</li>
+        <li class="check">&check; 할 일 1</li>
+        <li class="check">&check; 할 일 1</li>
+        <li class="check">&check; 할 일 1</li>
+        <li class="check">&check; 할 일 1</li>
+        <li class="check">&check; 할 일 1</li>
+
+    </ul>
+    <script>
+        let checklist=document.querySelectorAll(".check");
+        for(let i=0;i<checklist.length;i++){
+            checklist[i].addEventListener("click",function(){
+                
+                this.style.backgroundColor="blue";
+                checklist[i].style.color="hotpink";
+
+            })
+        }
+    </script>
+</body>
+</html>

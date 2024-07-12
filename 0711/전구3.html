@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <p>이미지 직접 클릭</p>
+    <img id="myImage" src="../images/applebox.jpg" alt=""><br>
+    <!-- <img src="../images/7G1Lw-tVlmqOp2v3zuTEHB_0R-MFoeyDs8-l_crpSFU3hdafvNVJrLvpQERJwNng-ebo6EZo--IWDnt-T2nsJPsQ_PVyuUzAVpqKQjcn7BkS_ldE-wtv1_QpjHiZROzDIEV9wtzTDV0P6AYspVxQ8g.webp" alt=""> -->
+    <script>
+        let myImage=document.getElementById('myImage')
+        
+        myImage.addEventListener("click",changePic)
+
+        function changePic(){
+            myImage.src="../images/7G1Lw-tVlmqOp2v3zuTEHB_0R-MFoeyDs8-l_crpSFU3hdafvNVJrLvpQERJwNng-ebo6EZo--IWDnt-T2nsJPsQ_PVyuUzAVpqKQjcn7BkS_ldE-wtv1_QpjHiZROzDIEV9wtzTDV0P6AYspVxQ8g.webp"; 
+        }
+    </script>
+</body>
+</html>

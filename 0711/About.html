@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: lightseagreen;
+            height: 70px;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+        }
+        li{
+            padding: 0 15px;
+        }
+        li:hover{
+            background-color: antiquewhite;
+        }
+        a{
+            text-decoration: none;
+            color: rebeccapurple;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        main{
+            height: 800px;
+            background-color: beige;
+        }
+        footer{
+            background-color: yellow;
+            color: gray;
+        }
+        .itemList{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html"> LoGo </a>
+        </div>
+        <div>
+            <div class="navBar">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="Project.html">Project</a></li>
+                    <li><a href="https://cafe.naver.com/bigbluesky">Cafe</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="https://github.com/sbh0609">Github</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="icons">
+            <ul>
+                <li><a href="#">아이콘</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main> 
+        <h1>게시판입니다 </h1>
+        <h2>원하는 말을 적어주세요</h2>
+        <div id="container">
+            <h1>to-do-list</h1>
+            <p>공부할 내용 기록!</p>
+            <form>
+                <input type="text" id="subject" autofocus>
+                <button onclick="newRegister(); return false;">추가하기</button>
+                <hr>
+                <!-- return false는  버튼의 기능중 하나인 submit 기능을 취소함 -->
+                <ul id="itemList"></ul>
+            </form>
+        </div>
+    </main>
+    <script>
+        function newRegister(){
+            let newItem = document.createElement("li");
+            let subject=document.querySelector("#subject");
+
+            let textNode = document.createTextNode(subject.value)
+            newItem.appendChild(textNode);
+            
+            //웹 문서에서 부모 노드 가져오기
+            let itemList=document.querySelector("#itemList");
+            // litemList.appendChild(newItem)
+            itemList.insertBefore(newItem, itemList.childNodes[0])
+            subject.value=""
+            
+            //입력된 모든 항목 가져오기
+            let items=document.querySelectorAll("li");
+            for(let i=0;i<items.length;i++){
+                items[i].addEventListener("click", function(){
+                    this.parentNode.removeChild(this);
+                })
+            }
+        }
+    </script>
+</body>
+</html>
